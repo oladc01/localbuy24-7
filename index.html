@@ -169,81 +169,41 @@
           <p class="text-white opacity-80">Create your account</p>
         </div>
 
-        <form onsubmit="handleSignup(event)" class="space-y-4">
-          <div>
-            <label class="block text-white text-sm font-medium mb-2"
-              >Full Name</label
-            >
-            <input
-              type="text"
-              id="signupName"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-              placeholder="Enter your full name"
-            />
-          </div>
-          <div>
-            <label class="block text-white text-sm font-medium mb-2"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="signupEmail"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div>
-            <label class="block text-white text-sm font-medium mb-2"
-              >Password</label
-            >
-            <input
-              type="password"
-              id="signupPassword"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-              placeholder="Create a password"
-            />
-          </div>
-          <div>
-            <label class="block text-white text-sm font-medium mb-2"
-              >City</label
-            >
-            <input
-              type="text"
-              id="signupCity"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-              placeholder="Enter your city"
-            />
-          </div>
-          <div>
-            <label class="block text-white text-sm font-medium mb-2"
-              >Account Type</label
-            >
-            <select
-              id="accountType"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
-            >
-              <option value="" class="text-gray-800">
-                Select account type
-              </option>
-              <option value="buyer" class="text-gray-800">Buyer</option>
-              <option value="seller" class="text-gray-800">
-                Local Business Seller
-              </option>
-            </select>
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all"
-          >
-            Create Account
-          </button>
-        </form>
-        <div class="text-center mt-6">
+       <form onsubmit="handleSignup(event)" class="space-y-4">
+    <div>
+        <label class="block text-white text-sm font-medium mb-2">Full Name</label>
+        <input type="text" id="signupName" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Enter your full name">
+    </div>
+    <div>
+        <label class="block text-white text-sm font-medium mb-2">Email</label>
+        <input type="email" id="signupEmail" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Enter your email">
+    </div>
+    <div>
+        <label class="block text-white text-sm font-medium mb-2">Password</label>
+        <input type="password" id="signupPassword" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Create a password">
+    </div>
+    <div>
+        <label class="block text-white text-sm font-medium mb-2">City</label>
+        <select id="signupCity" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
+            <option value="">Select a city</option>
+            <option value="Abeokuta">Abeokuta</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Ibadan">Ibadan</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-white text-sm font-medium mb-2">Account Type</label>
+        <select id="accountType" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
+            <option value="">Select account type</option>
+            <option value="buyer">Buyer</option>
+            <option value="seller">Local Business Seller</option>
+        </select>
+    </div>
+    <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+        Create Account
+    </button>
+</form>
+ <div class="text-center mt-6">
           <p class="text-white opacity-80">Already have an account?</p>
           <button
             onclick="showLogin()"
@@ -262,210 +222,89 @@
     </div>
 
     <!-- Buyer Dashboard -->
-    <div id="buyerDashboard" class="hidden min-h-screen bg-gray-50">
-      <button
-        id="cartButton"
-        class="relative p-2 text-gray-600 hover:text-purple-600"
-      >
-        <i class="fas fa-shopping-cart text-xl"></i>
-        <span
-          id="cartCount"
-          class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-          >0</span
-        >
-      </button>
-      <!-- Header -->
-      <header class="bg-white shadow-sm border-b">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-          <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">LocalBuy</h1>
+   
+<div id="buyerDashboard" class="hidden min-h-screen bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-800">LocalBuy - Buyer Dashboard</h1>
             <div class="flex items-center space-x-4">
-              <div class="relative">
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-                <i
-                  class="fas fa-search absolute left-3 top-3 text-gray-400"
-                ></i>
-              </div>
-              <button class="relative p-2 text-gray-600 hover:text-purple-600">
-                <i class="fas fa-shopping-cart text-xl"></i>
-                <span
-                  class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
-                  >3</span
-                >
-              </button>
-              <div class="flex items-center space-x-2">
-                <img
-                  src="https://via.placeholder.com/32"
-                  alt="Profile"
-                  class="w-8 h-8 rounded-full"
-                />
-                <span class="text-gray-700" id="buyerName">John Doe</span>
-                <button
-                  onclick="logout()"
-                  class="text-gray-500 hover:text-red-500 ml-2"
-                >
-                  <i class="fas fa-sign-out-alt"></i>
-                </button>
-              </div>
+                <span id="buyerName" class="text-gray-600"></span>
+                <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Logout</button>
             </div>
-          </div>
         </div>
-      </header>
-
-      <!-- Main Content -->
-      <main class="max-w-7xl mx-auto px-6 py-8">
-        <!-- Categories -->
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <!-- Search Bar -->
         <section class="mb-8">
-          <h2 class="text-xl font-semibold text-gray-800 mb-4">
-            Browse Categories
-          </h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div
-              onclick="filterByCategory('Food & Drinks')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-utensils text-2xl text-purple-600 mb-2"></i>
-              <p class="text-sm font-medium">Food & Drinks</p>
+            <div class="flex items-center space-x-4">
+                <div class="relative w-full">
+                    <input type="text" id="searchInput" oninput="searchProducts()" placeholder="Search products or services..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 pl-10">
+                    <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
             </div>
-            <div
-              onclick="filterByCategory('Fashion')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-tshirt text-2xl text-blue-600 mb-2"></i>
-              <p class="text-sm font-medium">Fashion</p>
-            </div>
-            <div
-              onclick="filterByCategory('Home & Garden')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-home text-2xl text-green-600 mb-2"></i>
-              <p class="text-sm font-medium">Home & Garden</p>
-            </div>
-            <div
-              onclick="filterByCategory('Services')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-wrench text-2xl text-orange-600 mb-2"></i>
-              <p class="text-sm font-medium">Services</p>
-            </div>
-            <div
-              onclick="filterByCategory('Automotive')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-car text-2xl text-red-600 mb-2"></i>
-              <p class="text-sm font-medium">Automotive</p>
-            </div>
-            <div
-              onclick="filterByCategory('Health & Beauty')"
-              class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer"
-            >
-              <i class="fas fa-spa text-2xl text-pink-600 mb-2"></i>
-              <p class="text-sm font-medium">Health & Beauty</p>
-            </div>
-          </div>
         </section>
+
+        <!-- City Filter -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Filter by City</h2>
+            <select id="cityFilter" onchange="filterProductsByCity()" class="w-full md:w-64 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <option value="">All Cities</option>
+                <option value="Abeokuta">Abeokuta</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Ibadan">Ibadan</option>
+            </select>
+        </section>
+
+        <!-- Browse Categories -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Browse Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div onclick="filterByCategory('Food & Drinks')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-utensils text-2xl text-purple-600 mb-2"></i>
+                    <p class="text-sm font-medium">Food & Drinks</p>
+                </div>
+                <div onclick="filterByCategory('Fashion')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-tshirt text-2xl text-blue-600 mb-2"></i>
+                    <p class="text-sm font-medium">Fashion</p>
+                </div>
+                <div onclick="filterByCategory('Home & Garden')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-home text-2xl text-green-600 mb-2"></i>
+                    <p class="text-sm font-medium">Home & Garden</p>
+                </div>
+                <div onclick="filterByCategory('Services')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-wrench text-2xl text-orange-600 mb-2"></i>
+                    <p class="text-sm font-medium">Services</p>
+                </div>
+                <div onclick="filterByCategory('Automotive')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-car text-2xl text-red-600 mb-2"></i>
+                    <p class="text-sm font-medium">Automotive</p>
+                </div>
+                <div onclick="filterByCategory('Health & Beauty')" class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all cursor-pointer">
+                    <i class="fas fa-spa text-2xl text-pink-600 mb-2"></i>
+                    <p class="text-sm font-medium">Health & Beauty</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured Products -->
         <section class="mb-8">
-          <h2 class="text-xl font-semibold text-gray-800 mb-4">
-            Featured Products
-          </h2>
-          <div
-            id="productList"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            <div class="bg-white rounded-lg shadow-sm card-hover">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Product"
-                class="w-full h-48 object-cover rounded-t-lg"
-              />
-              <div class="p-4">
-                <h3 class="font-semibold text-gray-800 mb-1">
-                  Fresh Organic Vegetables
-                </h3>
-                <p class="text-gray-600 text-sm mb-2">Green Garden Farm</p>
-                <div class="flex justify-between items-center">
-                  <span class="text-purple-600 font-bold">$25.99</span>
-                  <button
-                    onclick="addToCart('${product.id}')"
-                    class="bg-purple-600 text-white px-3 py-1 rounded text-sm hover:bg-purple-700"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Featured Products</h2>
+            <div id="productList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Products will be dynamically inserted here -->
             </div>
-            <div class="bg-white rounded-lg shadow-sm card-hover">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Product"
-                class="w-full h-48 object-cover rounded-t-lg"
-              />
-              <div class="p-4">
-                <h3 class="font-semibold text-gray-800 mb-1">
-                  Handmade Jewelry
-                </h3>
-                <p class="text-gray-600 text-sm mb-2">Artisan Crafts</p>
-                <div class="flex justify-between items-center">
-                  <span class="text-purple-600 font-bold">$45.00</span>
-                  <button
-                    onclick="addToCart('${product.id}')"
-                    class="bg-purple-600 text-white px-3 py-1 rounded text-sm hover:bg-purple-700"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm card-hover">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Product"
-                class="w-full h-48 object-cover rounded-t-lg"
-              />
-              <div class="p-4">
-                <h3 class="font-semibold text-gray-800 mb-1">
-                  Local Bakery Bread
-                </h3>
-                <p class="text-gray-600 text-sm mb-2">Corner Bakery</p>
-                <div class="flex justify-between items-center">
-                  <span class="text-purple-600 font-bold">$8.50</span>
-                  <button
-                    onclick="addToCart('${product.id}')"
-                    class="bg-purple-600 text-white px-3 py-1 rounded text-sm hover:bg-purple-700"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm card-hover">
-              <img
-                src="https://via.placeholder.com/300x200"
-                alt="Product"
-                class="w-full h-48 object-cover rounded-t-lg"
-              />
-              <div class="p-4">
-                <h3 class="font-semibold text-gray-800 mb-1">Coffee Beans</h3>
-                <p class="text-gray-600 text-sm mb-2">Local Roasters</p>
-                <div class="flex justify-between items-center">
-                  <span class="text-purple-600 font-bold">$18.99</span>
-                  <button
-                    onclick="addToCart('${product.id}')"
-                    class="bg-purple-600 text-white px-3 py-1 rounded text-sm hover:bg-purple-700"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
+        <!-- Top Products and Services (Recent Ads) -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Top Products and Services</h2>
+            <div id="recentProductsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Recent products/services will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+</div>
         <!-- Nearby Businesses -->
         <section>
           <h2 class="text-xl font-semibold text-gray-800 mb-4">
@@ -750,128 +589,62 @@
         </section>
 
         <!-- Product Management -->
-        <section class="mb-8">
-          <h2 class="text-xl font-semibold text-gray-800 mb-4">
-            Product Management
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div id="addProductForm" class="hidden p-4">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">
-                  Add New Product
-                </h3>
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Management</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div id="addProductForm" class="hidden p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Add New Product</h3>
                 <form onsubmit="handleAddProduct(event)" class="space-y-4">
-                  <div>
-                    <label class="block text-gray-700 text-sm font-medium mb-2"
-                      >Product Name</label
-                    >
-                    <input
-                      type="text"
-                      id="productName"
-                      required
-                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Enter product name"
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 text-sm font-medium mb-2"
-                      >Description</label
-                    >
-                    <textarea
-                      id="productDescription"
-                      required
-                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Enter product description"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 text-sm font-medium mb-2"
-                      >Price</label
-                    >
-                    <input
-                      type="number"
-                      id="productPrice"
-                      step="0.01"
-                      required
-                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Enter price (e.g., 29.99)"
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 text-sm font-medium mb-2"
-                      >Stock</label
-                    >
-                    <input
-                      type="number"
-                      id="productStock"
-                      required
-                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Enter stock quantity"
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 text-sm font-medium mb-2"
-                      >Category</label
-                    >
-                    <select
-                      id="productCategory"
-                      required
-                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    >
-                      <option value="">Select a category</option>
-                      <option value="Food & Drinks">Food & Drinks</option>
-                      <option value="Fashion">Fashion</option>
-                      <option value="Home & Garden">Home & Garden</option>
-                      <option value="Services">Services</option>
-                      <option value="Automotive">Automotive</option>
-                      <option value="Health & Beauty">Health & Beauty</option>
-                    </select>
-                  </div>
-                  <div class="flex gap-2">
-                    <button
-                      type="submit"
-                      class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-md text-sm hover:bg-purple-700 transition-colors"
-                    >
-                      Add Product
-                    </button>
-                    <button
-                      type="button"
-                      onclick="toggleProductForm()"
-                      class="flex-1 bg-gray-600 text-white px-3 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors"
-                    >
-                      Cancel
-                    </button>
-                  </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Product Name</label>
+                        <input type="text" id="productName" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter product name">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Description</label>
+                        <textarea id="productDescription" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter product description"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Price (₦)</label>
+                        <input type="number" id="productPrice" step="0.01" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter price (e.g., 2999.99)">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Stock</label>
+                        <input type="number" id="productStock" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter stock quantity">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Image</label>
+                        <input type="file" id="productImage" accept="image/*" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Category</label>
+                        <select id="productCategory" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="">Select a category</option>
+                            <option value="Food & Drinks">Food & Drinks</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Home & Garden">Home & Garden</option>
+                            <option value="Services">Services</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Health & Beauty">Health & Beauty</option>
+                        </select>
+                    </div>
+                    <div class="flex gap-2">
+                        <button type="submit" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-md text-sm hover:bg-purple-700 transition-colors">Add Product</button>
+                        <button type="button" onclick="toggleProductForm()" class="flex-1 bg-gray-600 text-white px-3 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors">Cancel</button>
+                    </div>
                 </form>
-              </div>
-              <div
-                id="addProductButton"
-                class="flex items-center justify-center h-64"
-              >
-                <button
-                  onclick="toggleProductForm()"
-                  class="flex flex-col items-center text-gray-500 hover:text-gray-700 transition-colors"
-                >
-                  <svg
-                    class="w-12 h-12 mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
-                  </svg>
-                  <span class="text-sm font-medium">Add New Product</span>
-                </button>
-              </div>
             </div>
-          </div>
-        </section>
-
+            <div id="addProductButton" class="flex items-center justify-center h-64">
+                <button onclick="toggleProductForm()" class="flex flex-col items-center text-gray-500 hover:text-gray-700 transition-colors">
+                    <svg class="w-12 h-12 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Add New Product</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
         <!-- Order Management -->
         <section>
           <h2 class="text-xl font-semibold text-gray-800 mb-4">
@@ -1067,569 +840,402 @@
     </div>
 
     <script>
-      // Simulated database using localStorage
-      function initializeStorage() {
-        if (!localStorage.getItem("users")) {
-          localStorage.setItem("users", JSON.stringify([]));
-        }
-        if (!localStorage.getItem("products")) {
-          localStorage.setItem("products", JSON.stringify([]));
-        }
-        if (!localStorage.getItem("cart")) {
-          localStorage.setItem("cart", JSON.stringify([]));
-        }
-      }
+   // Simulated database using localStorage
+function initializeStorage() {
+    if (!localStorage.getItem('users')) {
+        localStorage.setItem('users', JSON.stringify([]));
+    }
+    if (!localStorage.getItem('products')) {
+        localStorage.setItem('products', JSON.stringify([]));
+    }
+}
 
-      // Navigation functions
-      function showLanding() {
-        document.getElementById("landingPage").classList.remove("hidden");
-        document.getElementById("loginPage").classList.add("hidden");
-        document.getElementById("signupPage").classList.add("hidden");
-        document.getElementById("buyerDashboard").classList.add("hidden");
-        document.getElementById("sellerDashboard").classList.add("hidden");
-      }
+// Navigation functions
+function showLanding() {
+    document.getElementById('landingPage').classList.remove('hidden');
+    document.getElementById('loginPage').classList.add('hidden');
+    document.getElementById('signupPage').classList.add('hidden');
+    document.getElementById('buyerDashboard').classList.add('hidden');
+    document.getElementById('sellerDashboard').classList.add('hidden');
+}
 
-      function showLogin() {
-        document.getElementById("landingPage").classList.add("hidden");
-        document.getElementById("loginPage").classList.remove("hidden");
-        document.getElementById("signupPage").classList.add("hidden");
-        document.getElementById("buyerDashboard").classList.add("hidden");
-        document.getElementById("sellerDashboard").classList.add("hidden");
-      }
+function showLogin() {
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('loginPage').classList.remove('hidden');
+    document.getElementById('signupPage').classList.add('hidden');
+    document.getElementById('buyerDashboard').classList.add('hidden');
+    document.getElementById('sellerDashboard').classList.add('hidden');
+}
 
-      function showSignup() {
-        document.getElementById("landingPage").classList.add("hidden");
-        document.getElementById("loginPage").classList.add("hidden");
-        document.getElementById("signupPage").classList.remove("hidden");
-        document.getElementById("buyerDashboard").classList.add("hidden");
-        document.getElementById("sellerDashboard").classList.add("hidden");
-      }
+function showSignup() {
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('loginPage').classList.add('hidden');
+    document.getElementById('signupPage').classList.remove('hidden');
+    document.getElementById('buyerDashboard').classList.add('hidden');
+    document.getElementById('sellerDashboard').classList.add('hidden');
+}
 
-      function showDashboard(accountType, name) {
-        document.getElementById("landingPage").classList.add("hidden");
-        document.getElementById("loginPage").classList.add("hidden");
-        document.getElementById("signupPage").classList.add("hidden");
+function showDashboard(accountType, name) {
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('loginPage').classList.add('hidden');
+    document.getElementById('signupPage').classList.add('hidden');
+    
+    if (accountType === 'buyer') {
+        document.getElementById('buyerDashboard').classList.remove('hidden');
+        document.getElementById('buyerName').textContent = name;
+        filterProductsByCity();
+    } else {
+        document.getElementById('sellerDashboard').classList.remove('hidden');
+        document.getElementById('sellerName').textContent = name;
+        renderSellerProducts();
+    }
+}
 
-        if (accountType === "buyer") {
-          document.getElementById("buyerDashboard").classList.remove("hidden");
-          document.getElementById("buyerName").textContent = name;
-          populateCityFilter();
-          filterProductsByCity();
-          updateCartCount();
-        } else {
-          document.getElementById("sellerDashboard").classList.remove("hidden");
-          document.getElementById("sellerName").textContent = name;
-          renderSellerProducts();
-        }
-      }
+// Handle signup
+function handleSignup(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const city = document.getElementById('signupCity').value;
+    const accountType = document.getElementById('accountType').value;
 
-      // Handle signup
-      function handleSignup(event) {
-        event.preventDefault();
+    if (!name || !email || !password || !city || !accountType) {
+        alert('Please fill in all fields');
+        return;
+    }
 
-        const name = document.getElementById("signupName").value;
-        const email = document.getElementById("signupEmail").value;
-        const password = document.getElementById("signupPassword").value;
-        const city = document.getElementById("signupCity").value;
-        const accountType = document.getElementById("accountType").value;
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    if (users.some(user => user.email === email)) {
+        alert('Email already registered');
+        return;
+    }
 
-        if (!name || !email || !password || !city || !accountType) {
-          alert("Please fill in all fields");
-          return;
-        }
+    users.push({
+        name,
+        email,
+        password,
+        city,
+        accountType
+    });
 
-        const users = JSON.parse(localStorage.getItem("users")) || [];
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('currentUser', JSON.stringify({ email, name, city, accountType }));
+    
+    alert('Signup successful!');
+    showDashboard(accountType, name);
+    
+    document.getElementById('signupName').value = '';
+    document.getElementById('signupEmail').value = '';
+    document.getElementById('signupPassword').value = '';
+    document.getElementById('signupCity').value = '';
+    document.getElementById('accountType').value = '';
+}
 
-        // Check if email already exists
-        if (users.some((user) => user.email === email)) {
-          alert("Email already registered");
-          return;
-        }
+// Handle login
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.email === email && u.password === password);
 
-        // Add new user
-        users.push({
-          name,
-          email,
-          password, // In production, hash passwords
-          city,
-          accountType,
-        });
+    if (!user) {
+        alert('Invalid email or password');
+        return;
+    }
 
-        localStorage.setItem("users", JSON.stringify(users));
-        localStorage.setItem(
-          "currentUser",
-          JSON.stringify({ email, name, city, accountType })
-        );
+    localStorage.setItem('currentUser', JSON.stringify({
+        email: user.email,
+        name: user.name,
+        city: user.city,
+        accountType: user.accountType
+    }));
+    
+    showDashboard(user.accountType, user.name);
+    
+    document.getElementById('loginEmail').value = '';
+    document.getElementById('loginPassword').value = '';
+}
 
-        alert("Signup successful!");
-        showDashboard(accountType, name);
+// Handle logout
+function logout() {
+    localStorage.removeItem('currentUser');
+    showLanding();
+}
 
-        // Reset form
-        document.getElementById("signupName").value = "";
-        document.getElementById("signupEmail").value = "";
-        document.getElementById("signupPassword").value = "";
-        document.getElementById("signupCity").value = "";
-        document.getElementById("accountType").value = "";
-      }
-
-      // Handle login
-      function handleLogin(event) {
-        event.preventDefault();
-
-        const email = document.getElementById("loginEmail").value;
-        const password = document.getElementById("loginPassword").value;
-
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        const user = users.find(
-          (u) => u.email === email && u.password === password
-        );
-
-        if (!user) {
-          alert("Invalid email or password");
-          return;
-        }
-
-        localStorage.setItem(
-          "currentUser",
-          JSON.stringify({
-            email: user.email,
-            name: user.name,
-            city: user.city,
-            accountType: user.accountType,
-          })
-        );
-
-        showDashboard(user.accountType, user.name);
-
-        // Reset form
-        document.getElementById("loginEmail").value = "";
-        document.getElementById("loginPassword").value = "";
-      }
-
-      // Handle logout
-      function logout() {
-        localStorage.removeItem("currentUser");
-        localStorage.removeItem("cart");
-        showLanding();
-      }
-
-      // Toggle product form in seller dashboard
-      function toggleProductForm() {
-        try {
-          console.log("Attempting to toggle product form...");
-          const form = document.getElementById("addProductForm");
-          const button = document.getElementById("addProductButton");
-
-          if (!form) {
-            console.error("addProductForm element not found in DOM");
-            alert(
-              "Unable to open the product form. The form element is missing."
-            );
+// Toggle product form in seller dashboard
+function toggleProductForm() {
+    try {
+        const form = document.getElementById('addProductForm');
+        const button = document.getElementById('addProductButton');
+        
+        if (!form || !button) {
+            console.error('addProductForm or addProductButton not found:', { form, button });
+            alert('Unable to open the product form. Please ensure the form is correctly set up.');
             return;
-          }
-
-          if (!button) {
-            console.error("addProductButton element not found in DOM");
-            alert(
-              "Unable to open the product form. The button element is missing."
-            );
-            return;
-          }
-
-          console.log("Form and button found, toggling visibility...");
-          form.classList.toggle("hidden");
-          button.classList.toggle("hidden");
-
-          // Scroll to the form when it becomes visible
-          if (!form.classList.contains("hidden")) {
-            form.scrollIntoView({ behavior: "smooth", block: "center" });
-            console.log("Form is now visible and scrolled into view");
-          } else {
-            console.log("Form is now hidden");
-          }
-        } catch (error) {
-          console.error("Error toggling product form:", error);
-          alert("An error occurred while opening the product form.");
         }
-      }
+        
+        form.classList.toggle('hidden');
+        button.classList.toggle('hidden');
+        
+        if (!form.classList.contains('hidden')) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    } catch (error) {
+        console.error('Error toggling product form:', error);
+        alert('An error occurred while opening the product form.');
+    }
+}
 
-      // Handle product addition
-      function handleAddProduct(event) {
-        event.preventDefault();
-
-        try {
-          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-          if (!currentUser || currentUser.accountType !== "seller") {
-            alert("You must be logged in as a seller to add products");
+// Handle product addition with image
+function handleAddProduct(event) {
+    event.preventDefault();
+    
+    try {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser || currentUser.accountType !== 'seller') {
+            alert('You must be logged in as a seller to add products');
             return;
-          }
+        }
 
-          const productName = document.getElementById("productName").value;
-          const productDescription =
-            document.getElementById("productDescription").value;
-          const productPrice = parseFloat(
-            document.getElementById("productPrice").value
-          );
-          const productStock = parseInt(
-            document.getElementById("productStock").value
-          );
-          const productCategory =
-            document.getElementById("productCategory").value;
+        const productName = document.getElementById('productName').value;
+        const productDescription = document.getElementById('productDescription').value;
+        const productPrice = parseFloat(document.getElementById('productPrice').value);
+        const productStock = parseInt(document.getElementById('productStock').value);
+        const productCategory = document.getElementById('productCategory').value;
+        const productImage = document.getElementById('productImage').files[0];
 
-          if (
-            !productName ||
-            !productDescription ||
-            isNaN(productPrice) ||
-            isNaN(productStock) ||
-            !productCategory
-          ) {
-            alert("Please fill in all fields correctly");
+        if (!productName || !productDescription || isNaN(productPrice) || isNaN(productStock) || !productCategory) {
+            alert('Please fill in all fields correctly');
             return;
-          }
+        }
 
-          const products = JSON.parse(localStorage.getItem("products")) || [];
-          products.push({
-            id: Date.now().toString(), // Simple unique ID
+        let imageUrl = 'https://via.placeholder.com/300x200';
+        if (productImage) {
+            // For simplicity, using a placeholder URL. In production, upload to a service like Cloudinary.
+            // This is a mock implementation; replace with actual upload logic.
+            imageUrl = URL.createObjectURL(productImage); // Temporary URL for preview
+        }
+
+        const products = JSON.parse(localStorage.getItem('products')) || [];
+        products.push({
+            id: Date.now().toString(),
             name: productName,
             description: productDescription,
             price: productPrice,
             stock: productStock,
             category: productCategory,
+            imageUrl: imageUrl,
             sellerEmail: currentUser.email,
-            city: currentUser.city,
-          });
+            city: currentUser.city
+        });
 
-          localStorage.setItem("products", JSON.stringify(products));
-          toggleProductForm();
+        localStorage.setItem('products', JSON.stringify(products));
+        toggleProductForm();
+        
+        document.getElementById('productName').value = '';
+        document.getElementById('productDescription').value = '';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productStock').value = '';
+        document.getElementById('productCategory').value = '';
+        document.getElementById('productImage').value = '';
+        
+        renderSellerProducts();
+        alert('Product added successfully!');
+    } catch (error) {
+        console.error('Error adding product:', error);
+        alert('Failed to add product. Please try again.');
+    }
+}
 
-          // Reset form
-          document.getElementById("productName").value = "";
-          document.getElementById("productDescription").value = "";
-          document.getElementById("productPrice").value = "";
-          document.getElementById("productStock").value = "";
-          document.getElementById("productCategory").value = "";
+// Render products in seller dashboard
+function renderSellerProducts() {
+    try {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) return;
 
-          renderSellerProducts();
-          alert("Product added successfully!");
-        } catch (error) {
-          console.error("Error adding product:", error);
-          alert("Failed to add product. Please try again.");
-        }
-      }
-
-      // Render products in seller dashboard
-      function renderSellerProducts() {
-        try {
-          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-          if (!currentUser) return;
-
-          const products = JSON.parse(localStorage.getItem("products")) || [];
-          const sellerProducts = products.filter(
-            (p) => p.sellerEmail === currentUser.email
-          );
-
-          const productList = document.querySelector(
-            "#sellerDashboard .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3"
-          );
-          if (!productList) {
-            console.error("Product list container not found");
+        const products = JSON.parse(localStorage.getItem('products')) || [];
+        const sellerProducts = products.filter(p => p.sellerEmail === currentUser.email);
+        
+        const productList = document.querySelector('#sellerDashboard .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3');
+        if (!productList) {
+            console.error('Product list container not found');
             return;
-          }
+        }
 
-          // Clear existing products except the add product form
-          const addProductContainer =
-            productList.querySelector("div:last-child");
-          if (addProductContainer) {
-            productList.innerHTML = addProductContainer.outerHTML;
-          } else {
-            console.warn("Add product container not found in product list");
-            productList.innerHTML = "";
-          }
-
-          sellerProducts.forEach((product) => {
-            const productCard = document.createElement("div");
-            productCard.className =
-              "bg-white rounded-lg shadow-sm overflow-hidden";
+        productList.innerHTML = '';
+        sellerProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'bg-white rounded-lg shadow-sm overflow-hidden';
             productCard.innerHTML = `
-                <img src="https://via.placeholder.com/300x200" alt="Product" class="w-full h-40 object-cover">
+                <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-40 object-cover">
                 <div class="p-4">
-                    <h3 class="font-semibold text-gray-800 mb-2">${
-                      product.name
-                    }</h3>
-                    <p class="text-gray-600 text-sm mb-2">${
-                      product.description
-                    }</p>
-                    <p class="text-gray-600 text-sm mb-2">Category: ${
-                      product.category
-                    }</p>
+                    <h3 class="font-semibold text-gray-800 mb-2">${product.name}</h3>
+                    <p class="text-gray-600 text-sm mb-2">${product.description}</p>
+                    <p class="text-gray-600 text-sm mb-2">Category: ${product.category}</p>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-lg font-bold text-gray-800">$${product.price.toFixed(
-                          2
-                        )}</span>
-                        <span class="text-sm ${
-                          product.stock > 5
-                            ? "text-green-600"
-                            : "text-orange-600"
-                        }">${
-              product.stock > 0 ? `In Stock (${product.stock})` : "Out of Stock"
-            }</span>
+                        <span class="text-lg font-bold text-gray-800">₦${product.price.toFixed(2)}</span>
+                        <span class="text-sm ${product.stock > 5 ? 'text-green-600' : 'text-orange-600'}">${product.stock > 0 ? `In Stock (${product.stock})` : 'Out of Stock'}</span>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="editProduct('${
-                          product.id
-                        }')" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors">Edit</button>
-                        <button onclick="deleteProduct('${
-                          product.id
-                        }')" class="flex-1 bg-red-600 text-white px-3 py-2 rounded-md text-sm hover:bg-red-700 transition-colors">Delete</button>
-                    </div>
-                </div>
-            `;
-            productList.insertBefore(productCard, productList.lastElementChild);
-          });
-        } catch (error) {
-          console.error("Error rendering seller products:", error);
-        }
-      }
-
-      // Delete product
-      function deleteProduct(productId) {
-        try {
-          if (confirm("Are you sure you want to delete this product?")) {
-            let products = JSON.parse(localStorage.getItem("products")) || [];
-            products = products.filter((p) => p.id !== productId);
-            localStorage.setItem("products", JSON.stringify(products));
-            renderSellerProducts();
-            alert("Product deleted successfully!");
-          }
-        } catch (error) {
-          console.error("Error deleting product:", error);
-          alert("Failed to delete product. Please try again.");
-        }
-      }
-
-      // Add to cart
-      function addToCart(productId) {
-        try {
-          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-          if (!currentUser || currentUser.accountType !== "buyer") {
-            alert("You must be logged in as a buyer to add to cart");
-            return;
-          }
-
-          const cart = JSON.parse(localStorage.getItem("cart")) || [];
-          const product = JSON.parse(localStorage.getItem("products")).find(
-            (p) => p.id === productId
-          );
-
-          if (!product) {
-            alert("Product not found");
-            return;
-          }
-
-          const existingItem = cart.find(
-            (item) => item.productId === productId
-          );
-          if (existingItem) {
-            existingItem.quantity += 1;
-          } else {
-            cart.push({ productId, quantity: 1 });
-          }
-
-          localStorage.setItem("cart", JSON.stringify(cart));
-          updateCartCount();
-          alert("Product added to cart!");
-        } catch (error) {
-          console.error("Error adding to cart:", error);
-          alert("Failed to add to cart. Please try again.");
-        }
-      }
-
-      // Update cart count
-      function updateCartCount() {
-        try {
-          const cart = JSON.parse(localStorage.getItem("cart")) || [];
-          const cartCount = cart.reduce(
-            (total, item) => total + item.quantity,
-            0
-          );
-          const cartCountElement = document.getElementById("cartCount");
-          if (cartCountElement) {
-            cartCountElement.textContent = cartCount;
-          }
-        } catch (error) {
-          console.error("Error updating cart count:", error);
-        }
-      }
-
-      // Populate city filter dropdown
-      function populateCityFilter() {
-        try {
-          const users = JSON.parse(localStorage.getItem("users")) || [];
-          const cities = [...new Set(users.map((user) => user.city))];
-          const cityFilter = document.getElementById("cityFilter");
-
-          if (!cityFilter) {
-            console.error("City filter not found");
-            return;
-          }
-
-          // Clear existing options except the first one
-          while (cityFilter.options.length > 1) {
-            cityFilter.remove(1);
-          }
-
-          cities.forEach((city) => {
-            const option = document.createElement("option");
-            option.value = city;
-            option.textContent = city;
-            cityFilter.appendChild(option);
-          });
-        } catch (error) {
-          console.error("Error populating city filter:", error);
-        }
-      }
-
-      // Filter products by city and category
-      let currentCategory = "";
-
-      function filterByCategory(category) {
-        currentCategory = category;
-        filterProductsByCity();
-      }
-
-      function filterProductsByCity() {
-        try {
-          const cityFilter = document.getElementById("cityFilter").value;
-          const products = JSON.parse(localStorage.getItem("products")) || [];
-          const productList = document.getElementById("productList");
-
-          if (!productList) {
-            console.error("Product list not found");
-            return;
-          }
-
-          // Clear existing products
-          productList.innerHTML = "";
-
-          let filteredProducts = products;
-          if (cityFilter) {
-            filteredProducts = filteredProducts.filter(
-              (p) => p.city.toLowerCase() === cityFilter.toLowerCase()
-            );
-          }
-          if (currentCategory) {
-            filteredProducts = filteredProducts.filter(
-              (p) => p.category === currentCategory
-            );
-          }
-
-          if (filteredProducts.length === 0) {
-            productList.innerHTML =
-              '<p class="text-gray-600">No products available.</p>';
-            return;
-          }
-
-          filteredProducts.forEach((product) => {
-            const productCard = document.createElement("div");
-            productCard.className = "bg-white rounded-lg shadow-sm card-hover";
-            productCard.innerHTML = `
-                <img src="https://via.placeholder.com/300x200" alt="Product" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-800 mb-1">${
-                      product.name
-                    }</h3>
-                    <p class="text-gray-600 text-sm mb-2">${
-                      product.description
-                    }</p>
-                    <p class="text-gray-600 text-sm mb-2">Category: ${
-                      product.category
-                    }</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-purple-600 font-bold">$${product.price.toFixed(
-                          2
-                        )}</span>
-                        <button onclick="addToCart('${
-                          product.id
-                        }')" class="bg-purple-600 text-white px-3 py-1 rounded text-sm hover:bg-purple-700">
-                            Add to Cart
-                        </button>
+                        <button onclick="editProduct('${product.id}')" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors">Edit</button>
+                        <button onclick="deleteProduct('${product.id}')" class="flex-1 bg-red-600 text-white px-3 py-2 rounded-md text-sm hover:bg-red-700 transition-colors">Delete</button>
                     </div>
                 </div>
             `;
             productList.appendChild(productCard);
-          });
-        } catch (error) {
-          console.error("Error filtering products:", error);
-          productList.innerHTML =
-            '<p class="text-gray-600">Error loading products.</p>';
-        }
-      }
+        });
+    } catch (error) {
+        console.error('Error rendering seller products:', error);
+    }
+}
 
-      // Scroll to section and highlight
-      function scrollToSection(sectionId) {
-        try {
-          const section = document.getElementById(sectionId);
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
-            // Add a temporary highlight effect
-            section.classList.add("highlight-section");
-          } else {
-            console.error(`Section with ID ${sectionId} not found`);
-            alert("Section not found. Please try again later.");
-          }
-        } catch (error) {
-          console.error("Error scrolling to section:", error);
-          alert("An error occurred while navigating to the section.");
+// Delete product
+function deleteProduct(productId) {
+    try {
+        if (confirm('Are you sure you want to delete this product?')) {
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            products = products.filter(p => p.id !== productId);
+            localStorage.setItem('products', JSON.stringify(products));
+            renderSellerProducts();
+            alert('Product deleted successfully!');
         }
-      }
+    } catch (error) {
+        console.error('Error deleting product:', error);
+        alert('Failed to delete product. Please try again.');
+    }
+}
 
-      // Check if user is already logged in on page load
-      function checkAuth() {
-        try {
-          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-          if (currentUser) {
+// Filter products by city and category
+let currentCategory = '';
+
+function filterByCategory(category) {
+    currentCategory = category;
+    filterProductsByCity();
+}
+
+function filterProductsByCity() {
+    try {
+        const cityFilter = document.getElementById('cityFilter').value;
+        const products = JSON.parse(localStorage.getItem('products')) || [];
+        const productList = document.getElementById('productList');
+        
+        if (!productList) {
+            console.error('Product list not found');
+            return;
+        }
+        
+        productList.innerHTML = '';
+
+        let filteredProducts = products;
+        if (cityFilter) {
+            filteredProducts = filteredProducts.filter(p => p.city.toLowerCase() === cityFilter.toLowerCase());
+        }
+        if (currentCategory) {
+            filteredProducts = filteredProducts.filter(p => p.category === currentCategory);
+        }
+
+        if (filteredProducts.length === 0) {
+            productList.innerHTML = '<p class="text-gray-600">No products available.</p>';
+            return;
+        }
+
+        filteredProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'bg-white rounded-lg shadow-sm card-hover';
+            productCard.innerHTML = `
+                <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-1">${product.name}</h3>
+                    <p class="text-gray-600 text-sm mb-2">${product.description}</p>
+                    <p class="text-gray-600 text-sm mb-2">Category: ${product.category}</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-purple-600 font-bold">₦${product.price.toFixed(2)}</span>
+                    </div>
+                </div>
+            `;
+            productList.appendChild(productCard);
+        });
+    } catch (error) {
+        console.error('Error filtering products:', error);
+        productList.innerHTML = '<p class="text-gray-600">Error loading products.</p>';
+    }
+}
+
+// Search products
+function searchProducts() {
+    try {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const products = JSON.parse(localStorage.getItem('products')) || [];
+        const productList = document.getElementById('productList');
+        
+        if (!productList) {
+            console.error('Product list not found');
+            return;
+        }
+        
+        productList.innerHTML = '';
+
+        const filteredProducts = products.filter(product => 
+            product.name.toLowerCase().includes(searchTerm) || 
+            product.description.toLowerCase().includes(searchTerm)
+        );
+
+        if (filteredProducts.length === 0) {
+            productList.innerHTML = '<p class="text-gray-600">No products found.</p>';
+            return;
+        }
+
+        filteredProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'bg-white rounded-lg shadow-sm card-hover';
+            productCard.innerHTML = `
+                <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-1">${product.name}</h3>
+                    <p class="text-gray-600 text-sm mb-2">${product.description}</p>
+                    <p class="text-gray-600 text-sm mb-2">Category: ${product.category}</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-purple-600 font-bold">₦${product.price.toFixed(2)}</span>
+                    </div>
+                </div>
+            `;
+            productList.appendChild(productCard);
+        });
+    } catch (error) {
+        console.error('Error searching products:', error);
+        productList.innerHTML = '<p class="text-gray-600">Error searching products.</p>';
+    }
+}
+
+// Check if user is already logged in on page load
+function checkAuth() {
+    try {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
             showDashboard(currentUser.accountType, currentUser.name);
-          } else {
+        } else {
             showLanding();
-          }
-        } catch (error) {
-          console.error("Error checking auth:", error);
-          showLanding();
         }
-      }
+    } catch (error) {
+        console.error('Error checking auth:', error);
+        showLanding();
+    }
+}
 
-      // Initialize storage and check auth on page load
-      document.addEventListener("DOMContentLoaded", function () {
-        try {
-          initializeStorage();
-          checkAuth();
-
-          // Animate stats on load
-          const statNumbers = document.querySelectorAll(".text-2xl.font-bold");
-          statNumbers.forEach((stat) => {
-            const finalValue = parseInt(stat.textContent.replace(/[^\d]/g, ""));
-            let currentValue = 0;
-            const increment = finalValue / 20;
-
-            const timer = setInterval(() => {
-              currentValue += increment;
-              if (currentValue >= finalValue) {
-                currentValue = finalValue;
-                clearInterval(timer);
-              }
-
-              if (stat.textContent.includes("$")) {
-                stat.textContent =
-                  "$" + Math.floor(currentValue).toLocaleString();
-              } else {
-                stat.textContent = Math.floor(currentValue).toLocaleString();
-              }
-            }, 50);
-          });
-        } catch (error) {
-          console.error("Error during initialization:", error);
-        }
-      });
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        initializeStorage();
+        checkAuth();
+    } catch (error) {
+        console.error('Error during initialization:', error);
+    }
+});
     </script>
   </body>
 </html>
